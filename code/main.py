@@ -16,14 +16,14 @@ clock = pygame.time.Clock()
 player_image = pygame.image.load('graphics/bird/bird1.png')
 player = player_image.get_rect(center = (WIDTH/4, HEIGHT/2))
 
-# OBSTICLECS
+# OBSTACLES
 pasage_gap = 200
-pasage_height = random.randint(200, 300)
+pasage_height = random.randint(200, 400)
 
 down_pipe_image = pygame.image.load('graphics/obstacles/pipe.png')
 down_pipe = down_pipe_image.get_rect(topleft = (WIDTH, pasage_height + pasage_gap/2))
 up_pipe_image = pygame.transform.flip(down_pipe_image, False, True)
-up_pipe = up_pipe_image.get_rect(bottomleft = (WIDTH, pasage_height - pasage_height/2))
+up_pipe = up_pipe_image.get_rect(bottomleft = (WIDTH, pasage_height - pasage_gap/2))
 
 
 def window():
